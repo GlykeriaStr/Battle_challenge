@@ -4,15 +4,13 @@ get '/' do
   "Hello World"
 end
 
-get '/secret' do
-  "Secret move"
-end
-
-get '/secret4' do
-  "Bla"
-end
-
-get '/dog' do
+get '/random-dog' do
   @name = ["Amigo", "Oscar", "Viking"].sample
+  erb(:index)
+end
+
+get '/named-dog' do
+  p params
+  @name = params[:name]
   erb(:index)
 end
