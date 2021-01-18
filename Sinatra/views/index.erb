@@ -1,5 +1,11 @@
-<h1>My name is <%= @name %></h1>
 
+<% if @name %>
+  <h1>My name is <%= @name %></h1>
+<% end %>
+<form action="/named-dog">
+    <input type="text" name="name"> 
+    <input type="submit" value="Submit"> 
+ </form> 
 <div style ='border: 3px dashed red'>
   <img src='https://image.shutterstock.com/image-photo/close-portrait-pretty-sweet-small-260nw-705132340.jpg' />
 </div>
